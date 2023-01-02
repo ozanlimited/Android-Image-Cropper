@@ -3,9 +3,12 @@ plugins {
   id("org.jetbrains.kotlin.android")
   id("com.android.library")
   id("org.jetbrains.kotlin.plugin.parcelize")
-  id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
   id("dev.chrisbanes.paparazzi")
+}
+
+apply {
+  from("publish.gradle")
 }
 
 licensee {

@@ -30,10 +30,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build AAR ⚙️🛠
-        run: bash ./gradlew :lib:assemble
+        run: bash ./gradlew :cropper:assemble
 
       - name: Publish to GitLab Package Registry 🚀
-        run: bash ./gradlew :lib:publish
+        run: bash ./gradlew :cropper:publish
         env:
           GPR_USER: ${{ github.actor }}
           GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
@@ -69,6 +69,6 @@ jobs:
           GITLAB_DEPLOY_TOKEN: ${{ secrets.GITLAB_DEPLOY_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: lib/build/outputs/aar/lib-release.aar
-          asset_name: lib.aar
+          asset_path: cropper/build/outputs/aar/cropper-release.aar
+          asset_name: cropper.aar
           asset_content_type: application/aar
