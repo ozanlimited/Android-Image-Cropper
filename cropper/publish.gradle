@@ -4,7 +4,7 @@ ext {
     mGroupId = "com.ozanlimited"
     mArtifactId = "cropper"
     mVersionCode = 1
-    mVersionName = "1.0.0"
+    mVersionName = "1.0.1"
 
     mLibraryName = "Cropper"
     mLibraryDescription = ""
